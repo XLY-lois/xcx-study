@@ -1,0 +1,19 @@
+<van-tabs active="{{ active }}" bind:change="tabChange" sticky color="#2a5caa">
+    <van-tab title="水水碎碎念">
+      <dairyList></dairyList>
+    </van-tab>
+    <van-tab title="留言列表">
+      <view>  
+        <!-- <card totalMoney="{{ totalMoney }}" bind:changeParent="changeParent"></card> -->
+        <messageList></messageList>
+      </view>
+    </van-tab>
+    <van-tab title="星座运势">
+      <view class="tab-container">
+        <constellation></constellation>
+      </view>
+    </van-tab>
+    <van-tab title="最近访客">
+      <recentVisitors></recentVisitors>
+    </van-tab>
+</van-tabs> 

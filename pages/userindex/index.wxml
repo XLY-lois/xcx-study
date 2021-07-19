@@ -1,0 +1,41 @@
+<view class="header">
+  <view class="avatar-name">
+    <view >
+      <image class="avatar" src="{{ avatar }}"></image>
+    </view>
+    <view class="name">
+      <view>{{ name }}</view>
+      <view class="desc">{{ desc }}</view>
+    </view>
+  </view>
+  <view class="info-edit">
+    <view class="follow-fans">
+      <view>
+        <view>
+          关注
+        </view>
+        <view>
+          100
+        </view>
+      </view>
+      <view>
+        <view>
+          粉丝
+        </view>
+        <view>
+          100
+        </view>
+      </view>
+      <view>
+        <view>
+          获赞
+        </view>
+        <view>
+          1000
+        </view>
+      </view>
+    </view>
+    <view class="edit"></view>
+  </view>
+
+</view>

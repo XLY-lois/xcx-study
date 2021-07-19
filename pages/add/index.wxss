@@ -1,0 +1,16 @@
+/* pages/add/index.wxss */
+.textarea-container {
+
+}
+.textarea-container .label { 
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+}
+.textarea-container .textarea-box {
+  border: 1px solid #0000001f;
+}
+.btn-group {
+  padding: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+}

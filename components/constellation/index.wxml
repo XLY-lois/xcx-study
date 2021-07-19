@@ -1,0 +1,32 @@
+<view class="container">
+  <van-dropdown-menu>
+    <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" bind:change="onSwitch1Change" />
+    <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" bind:change="onSwitch2Change" />
+  </van-dropdown-menu>
+
+  <view class="card-box" wx:if="{{ curInfo.datetime }}">
+    <view class="datetime">{{ curInfo.datetime }}</view>
+    <view class="name">{{ curInfo.name }}</view>
+    <view class="summary">{{ curInfo.summary }}</view>
+    <view class="details-box">
+      <view class="qfriend">
+        <view>幸运星座</view>
+          <view>{{ curInfo.QFriend }}</view>
+      </view>
+      <view class="number"> 
+        <view>幸运数字</view>
+          <view>{{ curInfo.number }}</view>
+      </view>
+      <view class="color">
+        <view>幸运颜色</view>
+          <view>{{ curInfo.color }}</view>
+      </view>
+    </view>
+  </view>
+  <view class="button-box">
+    <van-button plain hairline bindtap="getInfo" color="#2a5caa">
+      查询
+    </van-button>
+  </view>
+
+</view>

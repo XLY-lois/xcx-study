@@ -1,0 +1,17 @@
+<view class="container">
+  <van-cell-group>
+    <van-cell 
+      wx:for="{{ messageList }}" 
+      wx:key="date" 
+      title="{{ item.name }} 说：" 
+      label="{{ item.message }}" 
+      value="{{ item.date }}" 
+      size="large"
+    />
+  </van-cell-group>
+  <van-button class="btn" color="#224b8f" plain bindtap="jumpTo" data-url="../../pages/add/index">给我留言</van-button>
+</view>
+
+<!-- <button bindtap="getList">getList</button> -->
+
+

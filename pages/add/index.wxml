@@ -1,0 +1,36 @@
+<view>
+  <view class="textarea-container">
+    <!-- <view class="label">内容</view> -->
+    <van-field 
+      model:value="{{ name }}" 
+      placeholder="你是谁？" 
+      border="{{ false }}" 
+    />
+    <view 
+      class="textarea-box"
+    >
+      <van-cell-group>
+        <van-field 
+          model:value="{{ message }}" 
+          type="textarea" 
+          placeholder="说点什么吗？" 
+          autosize="{{ textareaSize }}"
+          border="{{ false }}" 
+        />
+      </van-cell-group>
+    </view>
+  </view>
+  <view class="btn-group">
+    <van-button 
+      bindtap="submitMessage"
+      round 
+      type="info"
+      color="#faa755"
+    >
+      提交
+    </van-button>
+  </view>
+  <!-- <view>
+    <van-uploader file-list="{{ fileList }}" max-count="2" bind:after-read="afterRead" show-upload />
+  </view> -->
+</view>

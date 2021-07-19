@@ -1,0 +1,40 @@
+.header {
+  height: 300rpx;
+  background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F038c63c589aad6da801219c77eb79ed.png&refer=http%3A%2F%2Fimg.zcool.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1627200353&t=abe9cc1d99069efa1fe95915fb2280aa');
+}
+.header .avatar-name {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+}
+.header .avatar-name .avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.header .avatar-name .name {
+  margin-left: 30rpx;
+  overflow: hidden;
+}
+.header .avatar-name .name .desc {
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.header .info-edit {
+  height: 100rpx;
+  display: flex;
+}
+.header .info-edit .follow-fans  {
+  /* background-color: pink; */
+  width: 50%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.header .info-edit .edit {
+  /* background-color: skyblue; */
+  width: 50%;
+  height: 100rpx;
+}

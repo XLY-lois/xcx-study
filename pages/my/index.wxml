@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="header">
+    <image class="avatar"  src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+    <view>{{ userInfo.name }}</view>
+  </view>
+</view>
+<view class="center">
+  <van-grid>
+    <van-grid-item use-slot bindtap='jumpTo' data-url="../collection/index">
+      <view>
+        <image class="icon" src="../../img/icons/shoucang.png" />
+      </view>
+      <view>收藏</view>
+    </van-grid-item>
+    <van-grid-item use-slot bindtap='jumpTo' data-url="../friends/index">
+      <view>
+        <image class="icon" src="../../img/icons/haoyou.png" />
+      </view>
+      <view>好友</view>
+    </van-grid-item>
+    <van-grid-item use-slot bindtap='jumpTo' data-url="../setting/index">
+      <view>
+        <image class="icon" src="../../img/icons/shezhi.png" />
+      </view>
+      <view>设置</view>
+    </van-grid-item>
+    <van-grid-item use-slot bindtap='jumpTo' data-url="../customer/index">
+      <view>
+        <image class="icon" src="../../img/icons/kefu.png" />
+      </view>
+      <view>客服</view>
+    </van-grid-item>
+  </van-grid>
+  <view 
+    class="transparent-btn"
+    bindlongpress='add'
+    >
+  </view>
+  <!-- <van-cell title="单元格" is-link />
+  <van-cell title="单元格" is-link />
+  <van-cell title="单元格" is-link /> -->
+</view>

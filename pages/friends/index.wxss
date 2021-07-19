@@ -1,0 +1,35 @@
+.header {
+  padding:0;
+  /* background-color: pink; */
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 20px;
+  font-weight: 800;
+  border: 1px solid #00000031;
+}
+.content .item {
+  padding: 10rpx 20rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #bbbbbb;
+}
+.content .item .avatar {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+}
+.content .item .text {
+  flex: 1;
+  overflow: hidden;
+  margin-left: 20rpx;
+}
+.content .item .text .name {
+  font-size: 20px;
+}
+.content .item .text .desc {
+  color:#727272;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}

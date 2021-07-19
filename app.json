@@ -1,0 +1,50 @@
+{
+  "pages": [
+
+    "pages/prepage/index",
+    "pages/accounting/index",
+    "pages/index/index",
+    "pages/my/index",
+    "pages/add/index",
+    "pages/dairy/index",
+    "pages/setting/index",
+    "pages/customer/index",
+    "pages/friends/index",
+    "pages/userindex/index",
+    "pages/collection/index",
+    "pages/logs/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "xcx-study",
+    "navigationBarBackgroundColor":"#fab27b"
+  },
+  "tabBar": {
+    "selectedColor": "#31869B",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./img/icons/zhuye.png",
+        "selectedIconPath":"./img/icons/zhuye.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "./img/icons/gerenzhongxin.png",
+        "selectedIconPath":"./img/icons/gerenzhongxin.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "miniprogram_npm/@vant/weapp/button/index"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib":{
+    "weui": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "mp-dialog": "weui-miniprogram/dialog/dialog",
+    "mp-navigation-bar": "weui-miniprogram/navigation-bar/navigation-bar",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "card": "../../components/card/index",
+    "constellation": "../../components/constellation/index",
+    "messageList": "../../components/messageList/index",
+    "dairyList":"../../components/dairyList/index",
+    "recentVisitors":"../../components/recentVisitors/index"
+  }
+}

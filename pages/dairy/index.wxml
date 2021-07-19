@@ -1,0 +1,34 @@
+<van-cell-group>
+  <van-field
+    model:value="{{ title }}"
+    label="标题"
+    placeholder="请输入标题"
+    border="{{ true }}"
+  />
+</van-cell-group>
+<van-cell-group>
+  <van-field
+    model:value="{{ content }}"
+    label="内容"
+    type="textarea"
+    placeholder="请输入内容"
+    autosize="{{ textareaSize }}"
+    border="{{ true }}"
+  />
+</van-cell-group>
+<view class="tools">
+  <view class="img-container" bindtap="choseImg">
+    <van-image
+      width="10rem"
+      height="10rem"
+      fit="cover"
+      src="{{ fileList.url }}"
+    />
+  </view>
+  <view class="btn-group">
+    <van-button bindtap="submit">提交</van-button>
+    <!-- <van-button bindtap="choseImg">上传图片</van-button> -->
+  </view>
+</view>
+
+

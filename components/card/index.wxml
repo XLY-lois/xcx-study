@@ -1,0 +1,4 @@
+<!--components/card/index.wxml-->
+<text>子组件{{ totalMoney }}</text>
+<van-button bindtap="changeParent" type="primary">changeParent</van-button>
+

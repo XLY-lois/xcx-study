@@ -1,0 +1,18 @@
+<view class="list-container">
+  <view class="list-item" wx:for="{{dairyList}}" wx:key="_id">
+    <van-divider contentPosition="center">{{ item.date }}</van-divider>
+    <view class="title">{{ item.title }}</view>
+    <view class="content">
+      <view class="img" wx:if="{{ item.imgId }}"> 
+        <van-image
+          width="300rpx"
+          height="300rpx"
+          fit="cover"
+          src="{{ item.imgId }}"
+        />
+      </view>
+      <view class="text">{{ item.content }}</view>
+    </view>
+  </view>
+</view>
+

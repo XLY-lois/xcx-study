@@ -1,0 +1,30 @@
+.list-container {
+
+}
+.list-container .list-item {
+  width: 100%;
+}
+.list-container .list-item .title {
+  margin: 20rpx;
+  font-size: 18px;
+
+}
+.list-container .list-item .content {
+  display: flex;
+  margin: 20rpx;
+}
+.list-container .list-item .content .img{
+  padding: 10rpx;
+  background-color: rgb(197, 196, 196);
+}
+.list-container .list-item .content .text {
+  word-break:break-all;
+  margin-left: 20rpx;
+  height: 310rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6; 
+}

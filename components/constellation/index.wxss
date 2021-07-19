@@ -1,0 +1,48 @@
+/* components/xingzuo/index.wxss */
+.container {
+  margin-top: 10px;
+}
+.container .button-box {
+  margin: 20rpx 20rpx;
+  text-align: right;
+}
+.container .card-box {
+  padding: 28rpx;
+  margin-top: 10rpx;
+  border-radius: 5%;
+  border: 1px solid #00000011;
+  text-align: center;
+}
+.container .card-box .datetime {
+  margin: 20rpx 0;
+}
+.container .card-box .name {
+  margin: 20rpx 0;
+}
+.container .card-box .summary {
+  text-align: left;
+  margin: 20rpx 0;
+}
+.container .card-box .details-box {
+  margin: 20rpx 0;
+  display: flex;
+  justify-content: space-around;
+}
+.container .card-box .details-box .qfriend {
+  border: 1px dashed #faa755;
+  padding: 10rpx;
+}
+.container .card-box .details-box .number {
+  border: 1px dashed #224b8f;
+  padding: 10rpx;
+}
+.container .card-box .details-box .color {
+  border: 1px dashed #1d953f;
+  padding: 10rpx;
+}
+.container .wrapper{
+
+}
+.container .wrapper .picker{
+  
+}

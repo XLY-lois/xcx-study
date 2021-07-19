@@ -1,0 +1,16 @@
+/* pages/dairy/index.wxss */
+.tools {
+  display: flex;
+}
+.tools .img-container {
+  /* background-color: pink; */
+  width: 300rpx;
+}
+.tools .img-container .img-box {
+  width: 300rpx;
+}
+.tools .btn-group {
+  display: flex;
+  flex: 1;
+  flex-direction: row-reverse;
+}

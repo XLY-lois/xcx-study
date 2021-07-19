@@ -1,0 +1,26 @@
+<view>
+  <view class="header">
+    好友列表
+  </view>
+  <view class="content">
+    <view 
+      class="item" 
+      wx:for="{{ friendsList }}" 
+      wx:key="name"
+      bindtap='jumpTo' 
+      data-url="../userindex/index?name={{item.name}}"
+      >
+      <view>
+        <image 
+          class="avatar" 
+          src="{{ item.avatar }}"
+        >
+        </image>
+      </view>
+      <view class="text">
+        <view class="name">{{ item.name }}</view>
+        <view class="desc">{{ item.desc }}</view>
+      </view>
+    </view>
+  </view>
+</view>
