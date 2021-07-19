@@ -15,7 +15,7 @@
 }
 .list-container .list-item .content .img{
   padding: 10rpx;
-  background-color: rgb(197, 196, 196);
+  background-color: rgb(239, 230, 214);
 }
 .list-container .list-item .content .text {
   word-break:break-all;
