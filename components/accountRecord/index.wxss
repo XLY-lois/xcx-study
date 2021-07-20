@@ -1,0 +1,75 @@
+.container {
+  margin: 0;
+  padding: 0;
+}
+.container .btn-box {
+  margin: 40rpx 20rpx;
+}
+.container .record-container {
+  
+}
+.container .record-container .header {
+  margin: 20rpx;
+  margin-bottom: 10rpx;
+  padding: 0 10rpx;
+  background-color: #224c8fe8;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 40rpx;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.triangle-box {
+  height: 40rpx;
+}
+.container .record-container .header .triangle-box .triangle-top {
+  margin: 10rpx;
+  margin-top: 20rpx;
+  width: 0;
+  height: 0;
+  border-width: 0 16rpx 16rpx;
+  border-style: solid;
+  border-color: transparent transparent #fff;
+}
+.container .record-container .header .triangle-box .triangle-down {
+  margin: 10rpx;
+  width: 0;
+  height: 0;
+  border: 16rpx solid transparent;
+  border-top-color: #fff;
+}
+.container .record-container .record-list {
+  margin: 0 20rpx;
+}
+.container .record-container .record-list .record-item {
+  margin: 0; 
+  padding: 20rpx;
+  display: flex;
+  border-bottom: dashed 2px #eee;
+  align-items: center;
+}
+.container .record-container .record-list .record-item .icon {
+  width: 80rpx;
+  height: 80rpx;
+}
+.container .record-container .record-list .record-item .content {
+  flex:1;
+  margin: 0 20rpx;
+}
+
+.container .record-container .record-list .record-item .content .classification {
+  font-size: 18px;
+  color: #243E56;
+  font-weight: 800;
+}
+.container .record-container .record-list .record-item .money {
+  width: 80rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #aa2116;
+  font-weight: 800;
+}

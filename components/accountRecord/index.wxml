@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="btn-box">
+    <van-button type="primary" color="#faa755" block>记一笔</van-button>
+  </view>
+  <view class="record-container">
+    <view class="header">
+      <view>最近记录</view>
+     <view class="triangle-box">
+        <view class="triangle-top"></view>
+        <view class="triangle-down"></view>
+     </view>
+    </view>
+    <view class="record-list">
+      <view class="record-item">
+        <image class="icon" src="cloud://xcx-study-1gfs98ik9fcf0faa.7863-xcx-study-1gfs98ik9fcf0faa-1306433877/accountIcons/youxi.png"></image>
+        <view class="content">
+          <view class="classification">游戏</view>
+          <view class="desc">买了一个XX游戏</view>
+        </view>
+        <view class="money">-98</view>
+      </view>
+    </view>
+  </view>
+</view>

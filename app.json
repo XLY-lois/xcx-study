@@ -1,8 +1,9 @@
 {
   "pages": [
-
-    "pages/prepage/index",
+    "pages/addRecord/index",
     "pages/accounting/index",
+    "pages/prepage/index",
+  
     "pages/index/index",
     "pages/my/index",
     "pages/add/index",
