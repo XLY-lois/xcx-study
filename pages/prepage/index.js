@@ -7,13 +7,23 @@ Page({
   data: {
     value:''
   },
+  getUserInfo(){
+    wx.getUserProfile({
+      desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+      success: (res) => {
+        console.log(res)
+      }
+    })
+  },
   jumpToTab(e){
+    // this.getUserInfo()
     let url = e.currentTarget.dataset.url
     wx.switchTab({  
       url:url
     });  
   },
   jumpTo(e) {
+    // this.getUserInfo()
     let url = e.currentTarget.dataset.url
     wx.navigateTo({
       url: url,
@@ -35,7 +45,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
 
   /**

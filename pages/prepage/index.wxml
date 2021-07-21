@@ -1,16 +1,5 @@
 <view class="container">
   <view>你来这干嘛？</view>
-  <!-- <van-cell-group>
-    <van-field
-      value="{{ value }}"
-      placeholder="你是谁？"
-      border="{{ false }}"
-      bind:change="onChange"
-      label="昵称"
-    />
-  </van-cell-group> -->
   <view class="round-btn" bindtap="jumpTo" data-url="../../pages/accounting/index">记账</view>
   <view class="round-btn" bindtap="jumpToTab" data-url="../../pages/index/index">拜访水水</view>
-  <!-- <van-button type="primary" block>块级元素</van-button>
-  <van-button type="primary" block>块级元素</van-button> -->
 </view>

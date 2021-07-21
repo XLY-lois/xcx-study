@@ -1,8 +1,16 @@
 .container {
-  margin: 0;
+  /* margin: 40rpx 20rpx; */
+  margin-top: 40rpx;
+  width: 100%;
   padding: 0;
 }
 .container .btn-group {
-  margin: 0;
-  padding: 0;
+  margin-bottom: 40rpx;
+  display:flex;
+}
+.container .btn-group .btn-item{
+  margin: 0 40rpx;
+}
+.container .input {
+  margin-bottom: 40rpx;
 }

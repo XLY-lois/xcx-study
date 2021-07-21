@@ -10,7 +10,7 @@
     </van-tab>
     <van-tab title="星座运势">
       <view class="tab-container">
-        <constellation></constellation>
+        <!-- <constellation></constellation> -->
       </view>
     </van-tab>
     <van-tab title="最近访客">
