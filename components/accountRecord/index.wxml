@@ -1,6 +1,6 @@
 <view class="container">
   <view class="btn-box">
-    <van-button type="primary" color="#faa755" block>记一笔</van-button>
+    <van-button type="primary" color="#faa755" block bindtap="jumpTo" data-url="../../pages/addRecord/index">记一笔</van-button>
   </view>
   <view class="record-container">
     <view class="header">

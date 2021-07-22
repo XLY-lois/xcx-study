@@ -18,6 +18,18 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    jumpTo(e) {
+      let url = e.currentTarget.dataset.url
+      wx.navigateTo({
+        url: url,
+        success: function(res) {
+        },
+        fail: function(res) {
+          console.log(res)
+        },
+        complete: function(res) {
+        },
+       })
+    }
   }
 })
