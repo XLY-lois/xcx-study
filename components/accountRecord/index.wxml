@@ -11,13 +11,13 @@
      </view>
     </view>
     <view class="record-list">
-      <view class="record-item">
-        <image class="icon" src="cloud://xcx-study-1gfs98ik9fcf0faa.7863-xcx-study-1gfs98ik9fcf0faa-1306433877/accountIcons/youxi.png"></image>
+      <view class="record-item" wx:for="{{ recordList }}">
+        <image class="icon" src="{{ item.iconUrl }}"></image>
         <view class="content">
-          <view class="classification">游戏</view>
+          <view class="classification">{{ item.classId }}</view>
           <view class="desc">买了一个XX游戏</view>
         </view>
-        <view class="money">-98</view>
+        <view class="money">{{ item.amount }}</view>
       </view>
     </view>
   </view>

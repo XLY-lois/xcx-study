@@ -1,62 +1,85 @@
-<view class="container">
-  <view class="btn-group">
-    <view class="btn-item">
-      <van-button   
-        round 
-        bindtap="chooseType" 
-        data-type="income" 
-        color="{{ color.income }}"
-      >
-        收入
-      </van-button>
+<view class="outer">
+  <view class="container">
+    <view class="btn-group">
+      <view class="btn-item">
+        <van-button   
+          round 
+          bindtap="chooseType" 
+          data-type="income" 
+          color="{{ color.income }}"
+        >
+          收入
+        </van-button>
+      </view>
+      <view class="btn-item">
+        <van-button 
+          round 
+          bindtap="chooseType" 
+          data-type="pay" 
+          color="{{ color.pay }}"
+        >
+          支出
+        </van-button>
+      </view>
     </view>
-    <view class="btn-item">
-      <van-button 
-        round 
-        bindtap="chooseType" 
-        data-type="pay" 
-        color="{{ color.pay }}"
-      >
-        支出
-      </van-button>
+    <view class="input">
+      <van-cell-group>
+        <van-field
+          value="{{ money }}"
+          placeholder="请输入金额"
+          border="{{ false }}"
+          bind:change="onChangeMoney"
+          input-align="center"
+          size="large"
+        />
+      </van-cell-group>
+    </view>
+    <view class="class-list">
+      <van-collapse value="{{ activeCollapse }}" bind:change="onChangeCollapse">
+        <van-collapse-item title="分类1" name="1">
+          <van-grid column-num="4">
+              <van-grid-item 
+                use-slot 
+                wx:for="{{ classificationList }}" 
+                wx:key="classId"
+                bindtap="onChooseClass"
+                data-classid="{{ item.classId }}"
+                data-iconurl="{{ item.iconUrl }}"
+              >            
+                <view class="{{item.classId == curClass ?'is-checked':'normal'}}" >
+                    <image
+                      style="width: 130rpx; height: 130rpx;"
+                      src="{{ item.iconUrl }}"
+                    />
+                </view>
+              
+              </van-grid-item>     
+          </van-grid>
+        </van-collapse-item>
+        <van-collapse-item title="分类2" name="2">
+          该分类下暂无内容
+        </van-collapse-item>
+        <van-collapse-item title="分类3" name="3">
+          该分类下暂无内容
+        </van-collapse-item>
+      </van-collapse>
     </view>
   </view>
-  <view class="input">
-    <van-cell-group>
-      <van-field
-        value="{{ money }}"
-        placeholder="请输入金额"
-        border="{{ false }}"
-        bind:change="onChangeMoney"
-        input-align="center"
-        size="large"
-      />
-    </van-cell-group>
-  </view>
-  <view class="class-list">
-    <van-collapse value="{{ activeCollapse }}" bind:change="onChangeCollapse">
-      <van-collapse-item title="分类1" name="1">
-        <van-grid column-num="4">
-          <van-grid-item 
-            use-slot 
-            wx:for="{{ classificationList }}" 
-            wx:key="classId"
-          >
-            <image
-              style="width: 100rpx; height: 100rpx;"
-              src="{{ item.iconUrl }}"
-            />
-          </van-grid-item>
-        </van-grid>
-      </van-collapse-item>
-      <van-collapse-item title="分类2" name="2">
-        网店吸粉获客、会员分层营销、一机多种收款，告别经营低效和客户流失
-      </van-collapse-item>
-      <van-collapse-item title="分类3" name="3">
-        线上拓客，随时预约，贴心顺手的开单收银
-      </van-collapse-item>
-    </van-collapse>
+
+  <view class="submit-btn">
+      <van-cell-group>
+        <van-field
+          value="{{ message }}"
+          placeholder="请输入备注"
+          label="备注"
+          border="{{ false }}"
+          input-align="left"
+          size="large"
+        />
+      </van-cell-group>
+      <van-button type="primary" block color="#003a6c" bindtap="onSubmit">记  录</van-button>
   </view>
 </view>
-    
+
+
    

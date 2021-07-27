@@ -1,16 +1,27 @@
-.container {
+.outer {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+}
+.outer .container {
   /* margin: 40rpx 20rpx; */
   margin-top: 40rpx;
   width: 100%;
   padding: 0;
 }
-.container .btn-group {
+.outer .container .btn-group {
   margin-bottom: 40rpx;
   display:flex;
 }
-.container .btn-group .btn-item{
+.outer .container .btn-group .btn-item{
   margin: 0 40rpx;
 }
-.container .input {
+.outer .container .input {
   margin-bottom: 40rpx;
+}
+.outer .submit-btn {
+  margin-top: 20rpx;
+}
+.is-checked{
+  background-color: #fab27bad;
 }

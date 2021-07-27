@@ -12,11 +12,12 @@ App({
       traceUser: true
     })
     wx.checkSession({ 
-      success () { //登录过期
+      success () { //登录没过期
         return
       },
-      fail () {  //登录没过期
+      fail () {  //登录过期
           // 登录
+          let time = new Date()
           wx.login({
             success: res => {
               wx.cloud.callFunction({
@@ -29,6 +30,7 @@ App({
                   userList.add({
                     data: {
                       openid: res.result.openId,
+                      time
                     }
                   })
                 }

@@ -12,6 +12,9 @@ Page({
     },
     type:'',
     money: '', //记录金额
+    message:'', //备注
+    curClass:'',
+    iconUrl:'', //当前选中类型的url
     classificationList:[]
   },
   onChangeCollapse(event) {
@@ -50,7 +53,6 @@ Page({
   getClassList () {
     // 获取数据库引用
     const db = wx.cloud.database()
-    // 获取名为“banner”的集合引用
     const classificationList = db.collection('classificationList')
     // 获取集合（Promise 风格）
     classificationList.get().then(res => {
@@ -58,6 +60,37 @@ Page({
         classificationList: res.data
       })
       console.log(this.data.classificationList)
+    })
+  },
+  onChooseClass(e){
+    let curClass = e.currentTarget.dataset.classid
+    let iconUrl = e.currentTarget.dataset.iconurl
+    this.setData({
+      curClass,
+      iconUrl
+    })
+  },
+  onSubmit(e){
+    // 获取数据库引用
+    const db = wx.cloud.database()
+    const recordList = db.collection('recordList')
+    const time = new Date()
+    // const month = date.getMonth() + 1
+    // const day = date.getDate()
+    recordList.add({
+      data: {
+        amount:this.data.money,
+        classId:this.data.curClass,
+        iconUrl:this.data.iconUrl,
+        desc:'',
+        type:this.data.type,
+        time
+      }
+    }).then(res => {
+      wx.navigateTo({
+        url: '../accounting/index'
+      })
+      console.log(res) 
     })
   },
   /**

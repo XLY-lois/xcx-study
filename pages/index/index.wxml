@@ -17,3 +17,4 @@
       <recentVisitors></recentVisitors>
     </van-tab>
 </van-tabs> 
+<van-button round bindtap="jumpTo" data-url="../../pages/accounting/index">想去记账</van-button>

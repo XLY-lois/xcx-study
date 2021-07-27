@@ -8,6 +8,7 @@
     "constellation": "../../components/constellation/index",
     "messageList": "../../components/messageList/index",
     "dairyList":"../../components/dairyList/index",
-    "recentVisitors":"../../components/recentVisitors/index"
+    "recentVisitors":"../../components/recentVisitors/index",
+    "van-button": "@vant/weapp/button/index"
   }
 }
