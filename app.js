@@ -13,24 +13,47 @@ App({
     })
     wx.checkSession({ 
       success () { //登录没过期
-        return
+        console.log("success")
       },
       fail () {  //登录过期
-          // 登录
+          console.log("fail")
           let time = new Date()
           wx.login({
             success: res => {
               wx.cloud.callFunction({
                 name:'getOpenid',
                 complete:res=>{
-                  console.log('云函数获取到的openid:',res)
+                  const curOpenid = res.result.openId
+                  wx.setStorage({ //本地存储openid
+                    key:"curOpenid",
+                    data:curOpenid
+                  })
                   // 获取数据库引用
                   const db = wx.cloud.database()
                   const userList = db.collection('userList')
-                  userList.add({
-                    data: {
-                      openid: res.result.openId,
-                      time
+                  userList.get().then(res => {
+                    let userArr = res.data
+                    if(userArr.length>0){
+                      userArr.forEach(ele => {
+                        if(ele.openid === curOpenid) { //用户打开过小程序
+                          console.log("ele.openid === curOpenid")
+                        }else{ //将用户的openid 加到到用户表
+                          console.log("ele.openid != curOpenid")
+                          userList.add({
+                            data: {
+                              openid: curOpenid,
+                              time
+                            }
+                          })
+                        }
+                      })
+                    }else{
+                      userList.add({
+                        data: {
+                          openid: curOpenid,
+                          time
+                        }
+                      })
                     }
                   })
                 }
@@ -39,7 +62,6 @@ App({
           })
       }
     })
-   
   },
   globalData: {
     userInfo: null

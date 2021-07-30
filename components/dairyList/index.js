@@ -32,7 +32,7 @@ Component({
         this.setData({
           dairyList: res.data
         })
-        console.log(this.data.dairyList)
+        // console.log(this.data.dairyList)
       })
     },
   }

@@ -11,13 +11,13 @@
      </view>
     </view>
     <view class="record-list">
-      <view class="record-item" wx:for="{{ recordList }}">
+      <view class="record-item" wx:for="{{ recordList }}" wx:key="index">
         <image class="icon" src="{{ item.iconUrl }}"></image>
         <view class="content">
           <view class="classification">{{ item.classId }}</view>
-          <view class="desc">买了一个XX游戏</view>
+          <view class="desc">{{ item.desc }}</view>
         </view>
-        <view class="money">{{ item.amount }}</view>
+        <view class="money {{ item.type == 'pay'? 'pay' : 'income' }}"><text wx-if="{{ item.type == 'pay' }}">-</text>{{ item.amount }}</view>
       </view>
     </view>
   </view>

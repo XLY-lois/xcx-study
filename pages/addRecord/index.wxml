@@ -69,7 +69,7 @@
   <view class="submit-btn">
       <van-cell-group>
         <van-field
-          value="{{ message }}"
+          model:value="{{ desc }}"
           placeholder="请输入备注"
           label="备注"
           border="{{ false }}"

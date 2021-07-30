@@ -12,7 +12,7 @@ Page({
     },
     type:'',
     money: '', //记录金额
-    message:'', //备注
+    desc:'', //备注
     curClass:'',
     iconUrl:'', //当前选中类型的url
     classificationList:[]
@@ -82,7 +82,7 @@ Page({
         amount:this.data.money,
         classId:this.data.curClass,
         iconUrl:this.data.iconUrl,
-        desc:'',
+        desc:this.data.desc,
         type:this.data.type,
         time
       }

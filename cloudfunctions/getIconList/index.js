@@ -1,16 +1,18 @@
-// 云函数入口文件
+
+//此函式用来把存储中的icon的url写入数据库中
 const cloud = require('wx-server-sdk')
+const fs = require('fs')
+const path = require('path')
 
-cloud.init()
 
-// 云函数入口函数
+cloud.init({
+  env: cloud.DYNAMIC_CURRENT_ENV
+})
+
+const db = cloud.database()
 exports.main = async (event, context) => {
-  const wxContext = cloud.getWXContext()
+  // collection 上的 get 方法会返回一个 Promise，因此云函数会在数据库异步取完数据后返回结果
+  let res = db.collection('classificationList').get()
 
-  return {
-    event,
-    openid: wxContext.OPENID,
-    appid: wxContext.APPID,
-    unionid: wxContext.UNIONID,
-  }
+  return res
 }
