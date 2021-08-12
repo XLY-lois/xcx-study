@@ -45,13 +45,29 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+     // 获取数据库引用
+    //  const db = wx.cloud.database()
+    //  const classificationList = db.collection('classificationList')
+    //  let len = 34
+    //  for(let i=0;i < len;i++){
+    //   classificationList.add({
+    //     data: {
+    //       classId: '100'+(i+5),
+    //       classVal: '',
+    //       iconUrl:'cloud://xcx-study-1gfs98ik9fcf0faa.7863-xcx-study-1gfs98ik9fcf0faa-1306433877/accountIcons/'
+    //     }
+    //   }).then(res => {
+    //     console.log(res)
+    //   })
+    //  }
+     
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+ 
   },
 
   /**

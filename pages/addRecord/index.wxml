@@ -46,11 +46,12 @@
                 data-classid="{{ item.classId }}"
                 data-iconurl="{{ item.iconUrl }}"
               >            
-                <view class="{{item.classId == curClass ?'is-checked':'normal'}}" >
+                <view class="class-icon {{item.classId == curClass ?'is-checked':'normal'}}" >
                     <image
-                      style="width: 130rpx; height: 130rpx;"
+                      style="width: 140rpx; height: 140rpx;"
                       src="{{ item.iconUrl }}"
                     />
+                    <view class="class-val">{{ item.classVal }}</view>
                 </view>
               
               </van-grid-item>     

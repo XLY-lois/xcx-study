@@ -25,3 +25,9 @@
 .is-checked{
   background-color: #fab27bad;
 }
+.container .class-list .class-icon{
+  text-align: center;
+}
+.container .class-list .class-icon .class-val{
+  
+}
